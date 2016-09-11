@@ -20,34 +20,34 @@ Requires/ Tested with Python  2.7.9 on Ubuntu 16.04
 Uses the AWS boto3 python library for Route53 updates, and smtplib to send email
 
 If you don't have pip ->>
-# apt-get install python-pip
+$ apt-get install python-pip
 
-# pip install boto3
+$ pip install boto3
 
 update the variables in the script:
 
-#Variables
+//Variables
 to = 'to@email.com'
 gmail_user = 'user@gmail.com'
 gmail_pwd = '######'
 smtp_server = "smtp.gmail.com"
 smtp_port = 587
-#use a different get-ip service if you like
+//use a different get-ip service if you like
 get_local_IP_url='http://myip.dnsomatic.com'
 get_DNS_addr="your_local_dns_name.com"
 
-# AWS Settings (checkLocalIP_updateRoute53.py only)
+// AWS Settings (checkLocalIP_updateRoute53.py only)
 awsAccessKeyId="#####"
 awsSecretAccessKey="#####"
 hosted_zone_id='#####'
-# Note that this is a fully-qualified domain name.
+// Note that this is a fully-qualified domain name.
 name_to_match = 'subdomain.domain.com.'
 TTL=300
 
 Change file permissions:
-chmod 770 /home/user/checkLocalIP_updateRoute53.py
+$ chmod 770 /home/user/checkLocalIP_updateRoute53.py
 
-Add to Crontab:
-# crontab -e
+Add to Crontab (the schedule below runs hourly at 10 minutes after the hour)
+$ crontab -e
 
 10 * * * * /usr/bin/python /home/user/checkLocalIP_updateRoute53.py
