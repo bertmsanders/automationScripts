@@ -4,7 +4,7 @@ General use automation scripts
 checkLocalIP_updateRoute53.py
 checkLocalIP.py
 
-This script was written to replace a dynamic dns service. It compares the local public IP to a dns name, if it has changed, it connects to Route53 using the boto3 library and updates the A record with the new local public IP. This script should be run under cron, and does not require elevated privelages. I run it hourly, but you could run it on a different schedule if desired. Y
+These scripts were written to replace a dynamic dns service. It compares the local public IP to a dns name, if it has changed, it connects to Route53 using the boto3 library and updates the A record with the new local public IP. This script should be run under cron, and does not require elevated privelages. I run it hourly, but you could run it on a different schedule if desired. Y
 
 I would recommend using a spare/ throw-away gmail account to send the email, as this script currently stores the credentials in plain text
 
