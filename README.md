@@ -2,8 +2,8 @@
 General use automation scripts
 
 ##Dynamic DNS Replacements:
-  checkLocalIP_updateRoute53.py
-  checkLocalIP.py
+  * checkLocalIP_updateRoute53.py --> Checks Local Public IP, Emails changes, Updates AWS Route53 DNS
+  * checkLocalIP.py --> Checks Local Public IP, Emails changes
 
 ##Description
 These scripts were written to replace a dynamic dns service. It compares the local public IP to a dns name, if it has changed, it connects to Route53 using the boto3 library and updates the A record with the new local public IP. This script should be run under cron, and does not require elevated privelages. I run it hourly, but you could run it on a different schedule if desired. 
