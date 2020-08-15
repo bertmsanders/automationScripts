@@ -68,7 +68,7 @@ if match != True:
 	                    'TTL': TTL,
 	                    'ResourceRecords': [
         	                {
-                	            'Value': localIP
+                	            'Value':localIP
                         	},
 	                        ],
         	            }
