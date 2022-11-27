@@ -20,7 +20,7 @@ foreach ($contentMatchQuery in $contentMatchQueries){
 	echo "Attempting to Purge " + $contentMatchQuery
 	$date= Get-Date -Format "dddd-MM-dd-yyyy-HH-mm-ss"
 
-	$compSearchName = "STmaliciousEmail_" + $date  #change name
+	$compSearchName = $upn + "_maliciousEmail_" + $date  #change name
 
 	# Date/ Senders search
 	#New-ComplianceSearch -Name $compSearchName -ExchangeLocation all -ContentMatchQuery 'sent>=04/18/2018 AND From:"baduser@baddomain.com"' # Can also do something like Subject:"Bad Subject"
