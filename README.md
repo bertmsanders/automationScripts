@@ -1,6 +1,14 @@
 # automationScripts
 General use automation scripts
 
+
+##M365 Email Search & Purge PowerShell
+ * enter a list of Search Criterias, such as Email Subjects
+ * update the UPN to be an M365 admin user
+ * Log in to M365 when prompted
+ * Monitor Output
+
+
 ##Dynamic DNS Replacements:
   * checkLocalIP_updateRoute53.py --> Checks Local Public IP, Emails changes, Updates AWS Route53 DNS
   * checkLocalIP.py --> Checks Local Public IP, Emails changes
