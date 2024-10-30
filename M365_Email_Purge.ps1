@@ -4,7 +4,7 @@
 ## Modify to be an email address with M365 admin access
 $upn = admin@example.com
 
-#H3HVAC M354 Admin - RUN ONCE
+# M365 Admin - RUN ONCE
 Connect-IPPSSession -userprincipalname $upn
 
 ## Run Section 2: Repeat from here:
